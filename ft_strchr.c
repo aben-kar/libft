@@ -14,5 +14,5 @@ char *ft_strchr(const char *str, int c)
 }
 int main ()
 {
-    printf ("%s", ft_strchr("achraf", 99));
+    printf ("%s", ft_strchr("achraf", a));
 }

@@ -1,18 +1,16 @@
-#include <stdio.h>
+#include "libft.h"
 
 int ft_atoi(const char *s)
 {
-    size_t i = 0;
-    int sign = 1;
+    int i = 0;
     int rs = 0;
-    while (s[i] >= 9 && s[i] <= 13 || s[i] == 32)
+    int sign = 1;
+    while (s[i] >= '\t' && s[i] <= '\r' || s[i] == ' ')
         i++;
-    while (s[i] == '-' || s[i] == '+')
+    if (s[i] == '-' || s[i] == '+')
     {
         if (s[i] == '-')
-        {
-            sign *= -1; 
-        }
+            sign = -1; 
         i++;
     }
     while (s[i] >= '0'&& s[i] <= '9')
@@ -25,6 +23,7 @@ int ft_atoi(const char *s)
 
 int main()
 {
-    printf ("%d", ft_atoi("     -12a3"));
+    printf ("%d\n", ft_atoi("     	-2147483648"));
+    printf ("%d\n", atoi("     -2147483648"));
     return 0;
 } 

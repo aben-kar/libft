@@ -1,15 +1,4 @@
-#include <stdio.h>
-
-int ft_strlen(char *str)
-{
-	int i;
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return i;
-}
+#include "libft.h"
 
 char *ft_strrchr(const char *str, int c)
 {
@@ -24,6 +13,7 @@ char *ft_strrchr(const char *str, int c)
         return (char *)&str[len];
     return NULL;
 }
+
 int main()
 {   
     printf("%s", ft_strrchr("achraf", 'a'));

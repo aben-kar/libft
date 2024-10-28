@@ -12,7 +12,7 @@ char *ft_strchr(const char *str, int c)
         return (char *)str;
     return NULL;
 }
-int main ()
-{
-    printf ("%s", ft_strchr("achraf", a));
-}
+// int main ()
+// {
+//     printf ("%s", ft_strchr("achraf", a));
+// }

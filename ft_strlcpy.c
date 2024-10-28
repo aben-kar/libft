@@ -17,10 +17,10 @@ size_t ft_strlcpy(char *dest, const char *src, size_t size)
     return len;
 }
 
-int main()
-{
-    char src[] = "pooooool";
-    char destt[10];
-    printf ("%zu\n", ft_strlcpy(destt, src, 3));
-    printf ("%s", destt);
-}
+// int main()
+// {
+//     char src[] = "pooooool";
+//     char destt[10];
+//     printf ("%zu\n", ft_strlcpy(destt, src, 3));
+//     printf ("%s", destt);
+// }

@@ -9,7 +9,7 @@ size_t ft_strlen(const char *s)
     return i;
 }
 
-int main()
-{
-    printf ("%ld", ft_strlen("achraf"));
-}
+// int main()
+// {
+//     printf ("%ld", ft_strlen("achraf"));
+// }

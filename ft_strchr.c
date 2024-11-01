@@ -2,7 +2,7 @@
 
 char *ft_strchr(const char *str, int c)
 {
-    while (*str != '\0')
+    while (*str)
     {
         if ((char)c == *str)
             return (char *)str;
@@ -12,7 +12,9 @@ char *ft_strchr(const char *str, int c)
         return (char *)str;
     return NULL;
 }
-// int main ()
+
+// int main()
 // {
-//     printf ("%s", ft_strchr("achraf", a));
+//     printf ("%s\n", ft_strchr("achraf", 97));
+//     printf ("%s", strchr("achraf", 97));
 // }

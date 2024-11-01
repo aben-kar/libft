@@ -7,7 +7,7 @@ int ft_isalpha(int c)
 	return 0;
 }
 
-int main()
-{
-	printf ("%d", ft_isalpha(81));
-}
+// int main()
+// {
+// 	printf ("%d", ft_isalpha(81));
+// }

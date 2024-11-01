@@ -6,7 +6,7 @@ int ft_isalnum(int c)
 		return 1;
 	return 0;
 }
-int main()
-{
-	printf ("%d", ft_isalnum(94));
-}
+// int main()
+// {
+// 	printf ("%d", ft_isalnum(94));
+// }

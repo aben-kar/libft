@@ -31,7 +31,7 @@ static char *ft_strsdup(char const *s, size_t *j, char sp)
     result = (char *)malloc((*j - i + 1) * sizeof(char));
     if (!result)
         return (NULL);
-        k = 0;
+    k = 0;
     while ( k < *j - i)
     {
         result[k] = s[i + k];
@@ -72,7 +72,7 @@ char **ft_split(char const *s, char c)
         prr[j] = ft_strsdup(s, &i, c);
         if (!prr[j])
         {
-            ft_free(j - 1, prr);
+            ft_free(j, prr);
             return (NULL);
         }
         j++;
@@ -84,8 +84,10 @@ int main()
 {
     char **arr;
     
-    arr = ft_split(" av ab an ", ' ');
-    for(int i = 0; i < 3; i++)
+    arr = ft_split("aa,ss,,,,,,,,,ffggggg,,,,,,h,hh", ',');
+    if(!arr)
+        return 1;
+    for(int i = 0; i < 5; i++)
     {
         printf("%s\n", arr[i]);
     }

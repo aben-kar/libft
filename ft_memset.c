@@ -16,7 +16,10 @@ void *ft_memset(void *ptr, int vl, size_t n)
 
 // int main()
 // {
-//     char str[10] = "12345678";
-//     ft_memset(&str[2], 'b', 2);
-//     printf ("%s", str); 
+//     int b;
+//     ft_memset(&b, 5, 2);
+//      ft_memset(&b, 57, 1);
+//     // ft_memset(&str[4], '3', 1);
+//     // ft_memset(&str[5], '7', 1);
+//     printf ("%d\n",b); 
 // }

@@ -9,5 +9,5 @@ int ft_toupper(int c)
 
 int main()
 {
-	printf ("%d", ft_toupper(97));
+	printf ("%d", ft_toupper('a'));
 }

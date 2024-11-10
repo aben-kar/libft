@@ -1,27 +1,17 @@
 #include "libft.h"
 
-void my_upper(unsigned int i, char *str)
+void ft_putstr(char *str, int fd)
 {
-    if (*str >= 'a' && *str <= 'z')
-        *str -= 32;
-    //return str;
-}
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
-{
-    int i;
-
-    i = 0;
-    while (s[i])
+    int i = 0;
+    while(str[i])
     {
-        f(i, &s[i]);
+        write (fd, &str[i], 1);
         i++;
     }
 }
 
 int main()
 {
-    char str[] = "hello";
-    ft_striteri(str, my_upper);
-    printf ("%s", str);
-
+    char str[] = "pool";
+    ft_putstr(str, 1);
 }

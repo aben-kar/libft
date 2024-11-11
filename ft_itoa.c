@@ -76,7 +76,6 @@ char *ft_itoa(int n)
 
 int main()
 {
-    int pp = INT_MIN;
-    char *sttr = ft_itoa(pp);
+    char *sttr = ft_itoa(-42);
     printf("%s", sttr);
 }

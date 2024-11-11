@@ -3,7 +3,7 @@
 void my_upper(unsigned int i, char *str)
 {
     if(*str >= 'a' && *str <= 'z')
-        *str -= 32;
+        *str -= i;
 }
 void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -17,8 +17,10 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
 }
 int main()
 {
+    void (*f) (unsigned int , char *);
+    f = my_upper;
     char s[] = "hello world";
-    ft_striteri(s, my_upper);
+    ft_striteri(s, f);
     printf("%s", s);
     return 0;
 }

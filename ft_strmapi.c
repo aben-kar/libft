@@ -3,7 +3,7 @@
 char my_upper(unsigned int i, char str)
 {
     if(str >= 'a' && str <= 'z')
-        return str - 32;
+        return str - i;
     return str;
 }
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

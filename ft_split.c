@@ -41,12 +41,15 @@ static char *ft_strsdup(char const *s, size_t *j, char sp)
     return (result);
 }
 
-static void ft_free(int i, char **prr)
+static void ft_free(char **prr)
 {
-    while (i >= 0)
+    int i;
+    
+    i = 0;
+    while (prr[i])
     {
         free(prr[i]);
-        i--;
+        i++;
     }
     free(prr);
 }
@@ -71,10 +74,7 @@ char **ft_split(char const *s, char c)
             i++;
         prr[j] = ft_strsdup(s, &i, c);
         if (!prr[j])
-        {
-            ft_free(j, prr);
-            return (NULL);
-        }
+            return (ft_free(prr), NULL);
         j++;
     }
     return prr;
@@ -88,8 +88,7 @@ int main()
     if(!arr)
         return 1;
     for(int i = 0; i < 5; i++)
-    {
         printf("%s\n", arr[i]);
-    }
-    free(arr);
+    ft_free(arr);
+    system("leaks a.out");
 }

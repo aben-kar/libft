@@ -14,12 +14,10 @@ void *ft_memset(void *ptr, int vl, size_t n)
     return p;
 }
 
-// int main()
-// {
-//     int b;
-//     ft_memset(&b, 5, 2);
-//      ft_memset(&b, 57, 1);
-//     // ft_memset(&str[4], '3', 1);
-//     // ft_memset(&str[5], '7', 1);
-//     printf ("%d\n",b); 
-// }
+int main()
+{
+    int arr[4] = {0, 10, 100, 1000};
+    ft_memset(&arr[2], 5, 2);
+    ft_memset(arr + 2, 57, 1);
+    printf("%d\n", arr[2]);
+}

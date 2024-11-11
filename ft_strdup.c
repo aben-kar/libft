@@ -2,25 +2,19 @@
 
 char *ft_strdup(const char *s1)
 {
-    size_t i = 0; 
     size_t len = ft_strlen(s1);
     char *ptr;
 
-    ptr = (char *) malloc((len + 1) * sizeof(char));
-    if (ptr == NULL)
+    ptr = (char *)ft_calloc((len + 1) , sizeof(char));
+    if (ptr == NULL) 
         return NULL;
-
-    while (s1[i])
-    {
-        ptr[i] = s1[i];
-        i++;
-    }
+    ft_memcpy(ptr, s1, len);
     return ptr;
 }
 
 int main()
 {
-    char str[] = "hello";
+    char str[] = "hello00wef0.wef5";
     char *dest = ft_strdup(str);
-    printf ("%s", dest);
+    printf ("%s\n", dest);
 }

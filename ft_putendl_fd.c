@@ -1,22 +1,16 @@
 #include "libft.h"
+#include <fcntl.h>
 
 void ft_putendl_fd(char *s, int fd)
 {
-    int i;
-    
-    // if (!s)
-    //     return ;
-    i= 0;
-    while (s[i])
-    {
-        write (fd, &s[i], 1);
-        i++;
-    }
-    write (fd, "\n", 1);
+    if (!s)
+        return ;
+    ft_putstr_fd(s, fd);
+    ft_putchar_fd('\n', fd);
 }
 int main()
 {
-    char str[] = "POOL";
-    ft_putendl_fd(str, 1);
+    int fd = open("test", O_CREAT| O_RDWR);
+    ft_putendl_fd("pixou", fd);
     return 0;
 }

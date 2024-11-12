@@ -1,26 +1,28 @@
 #include "libft.h"
 
-void my_upper(unsigned int i, char *str)
+static void	my_upper(unsigned int i, char *str)
 {
-    if(*str >= 'a' && *str <= 'z')
-        *str -= i;
+	if (*str >= 'a' && *str <= 'z')
+		*str -= i;
 }
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    int i = 0;
+	int	i;
 
-    while (s[i])
-    {
-        f(i, &s[i]);
-        i++;
-    }
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
-int main()
-{
-    void (*f) (unsigned int , char *);
-    f = my_upper;
-    char s[] = "hello world";
-    ft_striteri(s, f);
-    printf("%s", s);
-    return 0;
-}
+// int	main(void)
+// {
+// 	void	(*f)(unsigned int, char *);
+// 	char	s[] = "hello world";
+
+// 	f = my_upper;
+// 	ft_striteri(s, f);
+// 	printf("%s", s);
+// 	return (0);
+// }

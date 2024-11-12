@@ -18,8 +18,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (st1[i] - st2[i]);
 }
 
-int	main(void)
-{
-	printf("%d\n", ft_memcmp("healo", NULL, 2));
-	// printf ("%d", memcmp(NULL, "hwlwwl", 2));
-}
+// int	main(void)
+// {
+// 	printf("%d\n", ft_memcmp("healo", NULL, 2));
+// 	// printf ("%d", memcmp(NULL, "hwlwwl", 2));
+// }

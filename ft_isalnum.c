@@ -6,5 +6,5 @@ int	ft_isalnum(int c)
 }
 // int main()
 // {
-// 	printf ("%d", ft_isalnum(94));
+// 	printf ("%d", ft_isalnum(90));
 // }

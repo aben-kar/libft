@@ -7,7 +7,7 @@ int ft_tolower(int c)
 	return c;
 }
 
-int main()
-{
-	printf ("%d", ft_toupper(97));
-}
+// int main()
+// {
+// 	printf ("%d", ft_toupper(97));
+// }

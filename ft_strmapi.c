@@ -1,10 +1,10 @@
 #include "libft.h"
 
-char my_upper(unsigned int i, char str)
+static char	my_upper(unsigned int i, char str)
 {
-    if(str >= 'a' && str <= 'z')
-        return str - i;
-    return str;
+	if (str >= 'a' && str <= 'z')
+		return (str - i);
+	return (str);
 }
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -25,11 +25,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-int main()
-{
-    char add[10] = "hellow";
+// int	main(void)
+// {
+// 	char add[10] = "hellow";
 
-    char *rs = ft_strmapi(add, my_upper);
+// 	char *rs = ft_strmapi(add, my_upper);
 
-    printf ("%s", rs);
-}
+// 	printf("%s", rs);
+// }

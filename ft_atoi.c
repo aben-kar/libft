@@ -29,23 +29,23 @@ int	ft_atoi(const char *s)
 	return (rs * sign);
 }
 
-int	main(void)
-{
-	printf("ft_atoi : %d\n", ft_atoi(""));
-	printf("atoi : %d\n", atoi("")); // 0
-	printf("ft_atoi : %d\n", ft_atoi("   456"));
-	printf("atoi : %d\n", atoi("   456")); // 456
-	printf("ft_atoi : %d\n", ft_atoi("-789"));
-	printf("atoi : %d\n", atoi("-789")); // -789
-	printf("ft_atoi : %d\n", ft_atoi("123abc"));
-	printf("atoi : %d\n", atoi("123abc")); // 123
-	printf("ft_atoi : %d\n", ft_atoi("2147483648"));
-	printf("atoi : %d\n", atoi("2147483648")); // INT_MAX (2,147,483,647)
-	printf("ft_atoi : %d\n", ft_atoi("-2147483649"));
-	printf("atoi : %d\n", atoi("-2147483649")); // INT_MIN (-2,147,483,648)
-	printf("ft_atoi : %d\n", ft_atoi("+"));
-	printf("atoi : %d\n", atoi("+")); // 0
-	printf("ft_atoi : %d\n", ft_atoi("-"));
-	printf("atoi : %d\n", atoi("-")); // 0
-	return (0);
-}
+// int	main(void)
+// {
+// 	printf("ft_atoi : %d\n", ft_atoi(""));
+// 	printf("atoi : %d\n", atoi("")); // 0
+// 	printf("ft_atoi : %d\n", ft_atoi("   456"));
+// 	printf("atoi : %d\n", atoi("   456")); // 456
+// 	printf("ft_atoi : %d\n", ft_atoi("-789"));
+// 	printf("atoi : %d\n", atoi("-789")); // -789
+// 	printf("ft_atoi : %d\n", ft_atoi("123abc"));
+// 	printf("atoi : %d\n", atoi("123abc")); // 123
+// 	printf("ft_atoi : %d\n", ft_atoi("2147483648"));
+// 	printf("atoi : %d\n", atoi("2147483648")); // INT_MAX (2,147,483,647)
+// 	printf("ft_atoi : %d\n", ft_atoi("-2147483649"));
+// 	printf("atoi : %d\n", atoi("-2147483649")); // INT_MIN (-2,147,483,648)
+// 	printf("ft_atoi : %d\n", ft_atoi("+"));
+// 	printf("atoi : %d\n", atoi("+")); // 0
+// 	printf("ft_atoi : %d\n", ft_atoi("-"));
+// 	printf("atoi : %d\n", atoi("-")); // 0
+// 	return (0);
+// }

@@ -86,15 +86,15 @@ char	**ft_split(char const *s, char c)
 	return (prr);
 }
 
-int	main(void)
-{
-	char **arr;
+// int	main(void)
+// {
+// 	char **arr;
 
-	arr = ft_split("aa,ss,,,,,,,,,ffggggg,,,,,,h,hh", ',');
-	if (!arr)
-		return (1);
-	for (int i = 0; i < 5; i++)
-		printf("%s\n", arr[i]);
-	ft_free(arr);
-	system("leaks a.out");
-}
+// 	arr = ft_split("aa,ss,,,,,,,,,ffggggg,,,,,,h,hh", ',');
+// 	if (!arr)
+// 		return (1);
+// 	for (int i = 0; i < 5; i++)
+// 		printf("%s\n", arr[i]);
+// 	ft_free(arr);
+// 	system("leaks a.out");
+// }

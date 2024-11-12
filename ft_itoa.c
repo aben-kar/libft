@@ -77,8 +77,8 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-int	main(void)
-{
-	char *sttr = ft_itoa(-42);
-	printf("%s", sttr);
-}
+// int	main(void)
+// {
+// 	char *sttr = ft_itoa(-2147483648);
+// 	printf("%s", sttr);
+// }

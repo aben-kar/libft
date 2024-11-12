@@ -12,9 +12,9 @@ char *ft_strdup(const char *s1)
     return ptr;
 }
 
-int main()
-{
-    char str[] = "hello00wef0.wef5";
-    char *dest = ft_strdup(str);
-    printf ("%s\n", dest);
-}
+// int main()
+// {
+//     char str[] = "hello00wef0.wef5";
+//     char *dest = ft_strdup(str);
+//     printf ("%s\n", dest);
+// }

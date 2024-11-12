@@ -20,10 +20,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (concate);
 }
 
-int	main(void)
-{
-	// char *s1 = "world";
+// int	main(void)
+// {
+// 	// char *s1 = "world";
 
-	char *dest = ft_strjoin("work", NULL);
-	printf("%s", dest);
-}
+// 	char *dest = ft_strjoin("work", NULL);
+// 	printf("%s", dest);
+// }

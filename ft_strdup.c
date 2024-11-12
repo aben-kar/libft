@@ -1,7 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: acben-ka <acben-ka@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/12 15:21:45 by acben-ka          #+#    #+#             */
+/*   Updated: 2024/11/12 18:48:56 by acben-ka         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char *ft_strdup(const char *s1)
 {
+    if (!s1)
+        return (NULL);
     size_t len = ft_strlen(s1);
     char *ptr;
 
@@ -14,7 +28,7 @@ char *ft_strdup(const char *s1)
 
 // int main()
 // {
-//     char str[] = "hello00wef0.wef5";
-//     char *dest = ft_strdup(str);
+//     char *str;
+//     char *dest = ft_strdup(NULL);
 //     printf ("%s\n", dest);
 // }

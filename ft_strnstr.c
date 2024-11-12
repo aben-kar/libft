@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: acben-ka <acben-ka@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/12 15:22:52 by acben-ka          #+#    #+#             */
+/*   Updated: 2024/11/12 20:49:50 by acben-ka         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strnstr(const char *str, const char *find, size_t n)
@@ -17,20 +29,19 @@ char	*ft_strnstr(const char *str, const char *find, size_t n)
 			return ((char *)(&str[i]));
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 
 // int main()
 // {
-//     const char  *big = "achraf";
-//     const char  *little = "hr";
-//     size_t  len = 5;
+//     const char  *big = "";
+//      const char  *little = "hr";
 //     char    *t;
-//     //char    *t2;
-
-//     t = ft_strnstr(big, NULL, len);
-//     //t2 = strnstr(big, little, len);
-//     printf("Resutl: %s\n", t);
-//     //printf ("%s", t2);
+//     t = ft_strnstr(big, little, 0);
+//     printf("%s\n", t);
+    
+// 	// char    *t2;
+//     // t2 = strnstr(NULL, little, 0);
+//     // printf ("%s", t2);
 //     return (0);
 // }

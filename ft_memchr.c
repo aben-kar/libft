@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: acben-ka <acben-ka@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/12 15:20:50 by acben-ka          #+#    #+#             */
+/*   Updated: 2024/11/12 15:54:44 by acben-ka         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
@@ -22,7 +34,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 // {
 // 	char *s1 = "pixhaha";
 
-// 	char *result = ft_memchr(NULL, 'h', 10);
+// 	char *result = ft_memchr(s1, 'H', 10);
 // 	printf("%s", result);
 // 	return (0);
 // }

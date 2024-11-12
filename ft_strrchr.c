@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: acben-ka <acben-ka@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/12 15:22:56 by acben-ka          #+#    #+#             */
+/*   Updated: 2024/11/12 20:53:40 by acben-ka         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
@@ -18,6 +30,8 @@ char	*ft_strrchr(const char *str, int c)
 
 // int	main(void)
 // {
-// 	printf("%s", ft_strrchr("achraf", 'a'));
+// 	printf("%s\n", ft_strrchr(NULL, 'a'));
+
+// 	//printf("%s", strrchr(NULL, 'a'));
 // 	return (0);
 // }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: acben-ka <acben-ka@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/12 15:21:37 by acben-ka          #+#    #+#             */
+/*   Updated: 2024/11/12 18:30:28 by acben-ka         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	count_word(char const *s1, char sp)
@@ -90,10 +102,10 @@ char	**ft_split(char const *s, char c)
 // {
 // 	char **arr;
 
-// 	arr = ft_split("aa,ss,,,,,,,,,ffggggg,,,,,,h,hh", ',');
+// 	arr = ft_split("ac,ab,aja,k", ',');
 // 	if (!arr)
 // 		return (1);
-// 	for (int i = 0; i < 5; i++)
+// 	for (int i = 0; i < 4; i++)
 // 		printf("%s\n", arr[i]);
 // 	ft_free(arr);
 // 	system("leaks a.out");

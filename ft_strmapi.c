@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: acben-ka <acben-ka@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/12 15:22:43 by acben-ka          #+#    #+#             */
+/*   Updated: 2024/11/12 20:26:44 by acben-ka         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static char	my_upper(unsigned int i, char str)
 {
 	if (str >= 'a' && str <= 'z')
-		return (str - i);
+		str -= i;
 	return (str);
 }
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

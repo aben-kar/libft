@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acben-ka <acben-ka@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aben-kar <aben-kar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:22:56 by acben-ka          #+#    #+#             */
-/*   Updated: 2024/11/12 20:53:40 by acben-ka         ###   ########.fr       */
+/*   Updated: 2024/11/12 23:50:21 by aben-kar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ char	*ft_strrchr(const char *str, int c)
 	int	len;
 
 	len = ft_strlen((char *)str);
-	while (len > 0)
+	if (c == 0)
+		return ((char *)&str[len]);
+	while (len >= 0)
 	{
-		if (str[len - 1] == (char)c)
-			return ((char *)&str[len - 1]);
+		if (str[len] == (char)c)
+			return ((char *)&str[len]);
 		len--;
 	}
-	if ((char)c == '\0')
-		return ((char *)&str[len]);
 	return (NULL);
 }
 

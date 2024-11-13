@@ -14,12 +14,12 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if (!dest || !src)
-		return NULL;
 	unsigned char	*des;
 	unsigned char	*sr;
 	size_t			i;
 
+	if (!dest || !src)
+		return (NULL);
 	des = (unsigned char *)dest;
 	sr = (unsigned char *)src;
 	i = 0;
@@ -30,7 +30,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
 // int main()
 // {
 //     char src[10] = "hello";

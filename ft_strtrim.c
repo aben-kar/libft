@@ -3,57 +3,48 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acben-ka <acben-ka@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aben-kar <aben-kar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:23:00 by acben-ka          #+#    #+#             */
-/*   Updated: 2024/11/12 21:04:38 by acben-ka         ###   ########.fr       */
+/*   Updated: 2024/11/13 01:17:09 by aben-kar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-struct my_variable{
-	size_t	len_s1;
-	size_t	i;
-	size_t	j;
-	size_t	len;
-	char	*dest;
-	size_t	k;
-};
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	struct my_variable s;
+	int		i;
+	int		j;
+	char	*dest;
 
 	if (!s1)
 		return (NULL);
 	if (!set)
 		return ((char *)s1);
-	s.len_s1 = ft_strlen(s1);
-	s.i = 0;
-	while (s1[s.i] && ft_strchr(set, s1[s.i]))
-		s.i++;
-	s.j = s.len_s1 - 1;
-	while (s.j > s.i && ft_strchr(set, s1[s.j]))
-		s.j--;
-	s.len = s.j - s.i + 1;
-	s.dest = (char *)malloc((s.len + 1) * sizeof(char));
-	if (s.dest == NULL)
-		return (NULL);
-	s.k = 0;
-	while (s.k < s.len && s1[s.i + s.k])
+	i = 0;
+	while (s1[i] && ft_strchr(set, s1[i]))
+		i++;
+	if (i == (int)ft_strlen(s1))
 	{
-		s.dest[s.k] = s1[s.i + s.k];
-		s.k++;
+		dest = ft_calloc(1, sizeof(char));
+		if (!dest)
+			return (NULL);
+		return (dest);
 	}
-	s.dest[s.k] = '\0';
-	return (s.dest);
+	j = ft_strlen(s1) - 1;
+	while (j >= 0 && ft_strchr(set, s1[j]))
+		j--;
+	dest = ft_calloc((j - i + 2), sizeof(char));
+	if (!dest)
+		return (NULL);
+	return (ft_memcpy(dest, s1 + i, j - i + 1));
 }
 
 // int	main(void)
 // {
-// 	// char s1[100] = "!hehlo, worldccccccccccch!eh";
+// 	// char s1[100] = "aaaaaa";
 // 	// char set[100] = "!eh";
-// 	char *str = ft_strtrim("!hehlo, worldccccccccccch!eh", NULL);
+// 	char *str = ft_strtrim("", "");
 // 	printf("%s\n", str);
 // }

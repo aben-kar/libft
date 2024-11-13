@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acben-ka <acben-ka@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aben-kar <aben-kar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:23:05 by acben-ka          #+#    #+#             */
-/*   Updated: 2024/11/12 21:09:00 by acben-ka         ###   ########.fr       */
+/*   Updated: 2024/11/13 00:07:21 by aben-kar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	len_s = ft_strlen(s);
 	if (start >= len_s)
-		return (NULL);
+		return (ft_strdup(""));
 	if (start + len > len_s)
 		len = len_s - start;
 	dest = (char *)malloc((len + 1) * sizeof(char));
@@ -42,6 +42,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // {
 //     char s1[] = "hello, world!";
 
-//     char *dest = ft_substr(s1, 7, 6);
+//     char *dest = ft_substr(s1, 20, 6);
 //     printf ("%s", dest);
 // }

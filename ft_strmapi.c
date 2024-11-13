@@ -3,21 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acben-ka <acben-ka@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aben-kar <aben-kar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:22:43 by acben-ka          #+#    #+#             */
-/*   Updated: 2024/11/12 20:26:44 by acben-ka         ###   ########.fr       */
+/*   Updated: 2024/11/12 23:36:44 by aben-kar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	my_upper(unsigned int i, char str)
-{
-	if (str >= 'a' && str <= 'z')
-		str -= i;
-	return (str);
-}
+// static char	my_upper(unsigned int i, char str)
+// {
+// 	if (str >= 'a' && str <= 'z')
+// 		str -= 32;
+// 	return (str);
+// }
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
@@ -37,6 +38,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
+
 // int	main(void)
 // {
 // 	char add[10] = "hellow";

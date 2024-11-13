@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acben-ka <acben-ka@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aben-kar <aben-kar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:20:35 by acben-ka          #+#    #+#             */
-/*   Updated: 2024/11/12 15:20:36 by acben-ka         ###   ########.fr       */
+/*   Updated: 2024/11/12 23:42:17 by aben-kar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 int	ft_isdigit(int c)
 {
-	return (c >= 0 && c <= 9);
+	while (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }
 // int main()
 // {
-// 	printf ("%d", ft_isdigit(10));
+// 	printf ("%d", ft_isdigit(7));
 // }

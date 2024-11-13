@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acben-ka <acben-ka@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aben-kar <aben-kar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:22:52 by acben-ka          #+#    #+#             */
-/*   Updated: 2024/11/12 20:49:50 by acben-ka         ###   ########.fr       */
+/*   Updated: 2024/11/13 01:51:21 by aben-kar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *str, const char *find, size_t n)
 	while (str[i] && i < n)
 	{
 		j = 0;
-		while (find[j] && str[i + j] == find[j])
+		while (find[j] && str[i + j] == find[j] && (i + j) < n)
 			j++;
 		if (find[j] == '\0')
 			return ((char *)(&str[i]));
@@ -31,17 +31,13 @@ char	*ft_strnstr(const char *str, const char *find, size_t n)
 	}
 	return (NULL);
 }
-
 // int main()
 // {
-//     const char  *big = "";
-//      const char  *little = "hr";
+//     const char  *big = "abcdhgd";
+//     const char  *little = "abc";
 //     char    *t;
-//     t = ft_strnstr(big, little, 0);
-//     printf("%s\n", t);
-    
-// 	// char    *t2;
-//     // t2 = strnstr(NULL, little, 0);
-//     // printf ("%s", t2);
+//     t = ft_strnstr(big, little, 2);
+//     if (t) 
+// 		printf("%s\n", t);
 //     return (0);
 // }

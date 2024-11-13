@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: acben-ka <acben-ka@student.42.fr>          +#+  +:+       +#+         #
+#    By: aben-kar <aben-kar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/12 21:20:13 by acben-ka          #+#    #+#              #
-#    Updated: 2024/11/12 21:20:14 by acben-ka         ###   ########.fr        #
+#    Updated: 2024/11/13 17:28:33 by aben-kar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,3 +36,5 @@ fclean : clean
 	rm -rf $(NAME)
 
 re : fclean all
+
+.PHONY: all clean fclean re

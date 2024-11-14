@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acben-ka <acben-ka@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aben-kar <aben-kar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 18:08:02 by acben-ka          #+#    #+#             */
-/*   Updated: 2024/11/13 18:08:03 by acben-ka         ###   ########.fr       */
+/*   Updated: 2024/11/14 14:55:04 by aben-kar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*str;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	i = 0;
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s)) + 1);
@@ -39,11 +39,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 
-// int	main(void)
-// {
-// 	char add[10] = "hellow";
+int	main(void)
+{
+	char add[10] = "hellow";
 
-// 	char *rs = ft_strmapi(add, my_upper);
+	char *rs = ft_strmapi(add, NULL);
 
-// 	printf("%s", rs);
-// }
+	printf("%s", rs);
+}

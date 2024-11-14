@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acben-ka <acben-ka@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aben-kar <aben-kar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:20:19 by acben-ka          #+#    #+#             */
-/*   Updated: 2024/11/12 15:42:16 by acben-ka         ###   ########.fr       */
+/*   Updated: 2024/11/14 14:52:52 by aben-kar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ void	*ft_calloc(size_t num, size_t size)
 	size_t	total_size;
 	void	*ptr;
 
+	if (num != 0 && (18446744073709551615UL / num < size))
+		return (NULL);
 	total_size = num * size;
 	ptr = malloc(total_size);
 	if (!ptr)
 		return (NULL);
-	if (total_size == 0)
-		total_size = 1;
 	ft_bzero(ptr, total_size);
 	return (ptr);
 }

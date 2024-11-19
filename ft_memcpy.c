@@ -6,29 +6,29 @@
 /*   By: acben-ka <acben-ka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:20:58 by acben-ka          #+#    #+#             */
-/*   Updated: 2024/11/12 16:15:00 by acben-ka         ###   ########.fr       */
+/*   Updated: 2024/11/16 15:55:55 by acben-ka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char	*des;
-	unsigned char	*sr;
+	unsigned char	*d;
+	unsigned char	*s;
 	size_t			i;
 
-	if (!dest || !src)
+	if (dst == NULL && src == NULL)
 		return (NULL);
-	des = (unsigned char *)dest;
-	sr = (unsigned char *)src;
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
 	i = 0;
 	while (i < n)
 	{
-		des[i] = sr[i];
+		d[i] = s[i];
 		i++;
 	}
-	return (dest);
+	return (dst);
 }
 // int main()
 // {
